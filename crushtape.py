@@ -56,11 +56,11 @@ def compose_playlist(spotify, message, args):
 
 def main():
     parser = argparse.ArgumentParser(prog="crushtape")
-    parser.add_argument("--username", required=True)
-    parser.add_argument("--title", default="Playlist For My Crush")
-    parser.add_argument("--ratio", type=float, default=0.95)
-    parser.add_argument("--searchterms", type=int, default=3)
-    parser.add_argument("message")
+    parser.add_argument("--username", required=True, help="Your Spotify username.")
+    parser.add_argument("--title", default="Playlist For My Crush", help="Title to give the new playlist.")
+    parser.add_argument("--ratio", type=float, default=0.95, help="Leeway when picking song titles, with 1.0 being an exact match.")
+    parser.add_argument("--searchterms", type=int, default=3, help="Number of terms to try together before skipping a word.")
+    parser.add_argument("message", help="The message to spell out using song titles.")
     args = parser.parse_args()
     
     scope = "playlist-modify-private"
