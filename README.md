@@ -1,5 +1,5 @@
 # crushtape
-Uses Spotify's web API to generate playlists for your crush.
+Uses Spotify's web API to generate playlists spelling out messages.
 
 ## Dependencies
 The only dependency is [Spotipy](https://github.com/plamere/spotipy). Install it with pip:
